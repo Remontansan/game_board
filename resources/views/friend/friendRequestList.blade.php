@@ -23,7 +23,9 @@
 <div class="container mb-4">
 
 <a class="btn btn-primary mb-4" href="/friend" role="button">フレンド一覧</a>
-<a class="btn btn-primary mb-4" href="/home" role="button">メニューへ</a>
+<a class="btn btn-primary mb-4" href="/gameboard" role="button">掲示板へ</a>
+<a class="btn btn-primary mb-4" href="/profile" role="button">プロフィールへ</a>
+<a class="btn btn-primary mb-4" href="/matching" role="button">マッチングへ</a>
 
 <table class="table">
   <thead>

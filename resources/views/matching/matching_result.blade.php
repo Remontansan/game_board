@@ -22,9 +22,9 @@
 </script>
 
 
-    <a class="btn btn-secondary mb-3" href="/home">
-        ホーム画面へ戻る
-    </a>
+<a class="btn btn-primary mb-4" href="/gameboard" role="button">掲示板へ</a>
+<a class="btn btn-primary mb-4" href="/profile" role="button">プロフィールへ</a>
+<a class="btn btn-primary mb-4" href="/friend" role="button">フレンド一覧へ</a>
 
     @foreach ($other_profiles as $other_profile)
 

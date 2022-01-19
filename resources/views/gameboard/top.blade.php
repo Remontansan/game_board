@@ -22,7 +22,9 @@
 </script>
 
   <a class="btn btn-primary mb-4" href="/gameboard/create" role="button">投稿</a>
-  <a class="btn btn-primary mb-4" href="/home" role="button">メニューへ</a>
+  <a class="btn btn-primary mb-4" href="/profile" role="button">プロフィールへ</a>
+  <a class="btn btn-primary mb-4" href="/matching" role="button">マッチングへ</a>
+  <a class="btn btn-primary mb-4" href="/friend" role="button">フレンド一覧へ</a>
 
   <table class="table table-hover">
     <thead>

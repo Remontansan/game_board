@@ -2,8 +2,45 @@
 
 @section('content')
 <div class="container">
+
+  <!-- フラッシュメッセージ -->
+  <script type="text/javascript">
+            // {{--成功時--}}
+            @if (session('msg_success'))
+                $(function () {
+                    toastr.success('{{ session('msg_success') }}');
+                });
+            @endif
+
+            // {{--失敗時--}}
+            @if (session('msg_danger'))
+                $(function () {
+                    toastr.error('{{ session('msg_danger') }}');
+                });
+            @endif
+</script>
+
+@if (empty( $judgment ))
+
+    <a class="btn btn-primary mb-4" href="/gameboard" role="button">掲示板へ</a>
+    <a class="btn btn-primary mb-4" href="/matching" role="button">マッチングへ</a>
+    <a class="btn btn-primary mb-4" href="/friend" role="button">フレンド一覧へ</a>
+
+@endif
+
     <form method="POST" action="/profileStore">
         @csrf
+
+        @if ($errors->any())
+	    <div class="alert alert-danger">
+	        <ul>
+	            @foreach ($errors->all() as $error)
+	                <li>{{ $error }}</li>
+	            @endforeach
+	        </ul>
+	    </div>
+	@endif
+    
         <div class="form-group">
             <label for="subject">
                 ニックネーム
@@ -138,9 +175,6 @@
                 rows="4"
             >{{ $name = isset($profile['content']) ? $profile['content'] : '' }}</textarea>
         </div>
-        <a class="btn btn-secondary" href="/home">
-                ホーム画面へ戻る
-        </a>
         
         <button type="submit" class="btn btn-primary">
                 更新
